@@ -28,3 +28,6 @@ class Checkboxes(unittest.TestCase):
         checkbox_two = driver.find_element_by_xpath(second_checkbox)
         checkbox_two.click()
         print(checkbox_two.is_selected())
+
+    def tearDown(self):
+        self.driver.quit()
