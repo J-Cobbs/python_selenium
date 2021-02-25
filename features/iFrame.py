@@ -1,7 +1,5 @@
 import unittest
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions
 import time
 
 
@@ -11,7 +9,7 @@ class IFrame(unittest.TestCase):
         self.i_frame_url = self.base_url + 'frames'
         self.driver = webdriver.Chrome(executable_path=r'/Applications/TestFiles/chromedriver')
 
-    def test_pop_up_ad(self):
+    def test_text_in_iframe(self):
         i_frame_link_path = '//*[@id="content"]/div/ul/li[2]/a'
         header_path = '//*[@id="content"]/div/h3'
         expected_header_text = 'An iFrame containing the TinyMCE WYSIWYG Editor'
