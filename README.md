@@ -1,3 +1,11 @@
+# Table of content
+
+- [Python + Selenium + PyCharm](#python--selenium--pycharm)
+- [What is this for?](#what-is-this-for)
+- [Improvement](#improvement)
+- [Bonus - Allure Report](#bonus---allure-report)
+
+
 # Python + Selenium + PyCharm
 
 This project was created for the automation practice using the Python and Selenium in PyCharm IDE.
