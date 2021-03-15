@@ -13,6 +13,7 @@ class Redirect(unittest.TestCase):
         redicrect_btn_path = '//*[@id="redirect"]'
         status_code_header_path = '//*[@id="content"]/div/h3'
         paragraph_status_path = '//*[@id="content"]/div/p'
+        paragraph_expected_text_path = 'This page returned a 500 status code.\n\nFor a definition and common list of HTTP status codes, go here'
         status_200_path = '//*[@id="content"]/div/ul/li[1]/a'
         status_500_path = '//*[@id="content"]/div/ul/li[4]/a'
         back_to_status_code_path = '//*[@id="content"]/div/p/a'
@@ -28,6 +29,8 @@ class Redirect(unittest.TestCase):
         status_500_btn = driver.find_element_by_xpath(status_500_path).click()
         paragraph = driver.find_element_by_xpath(paragraph_status_path).text
         print(paragraph)
+        self.assertRegex(paragraph_expected_text_path, paragraph,
+                         f'This is not a proper paragraph')
 
     def tearDown(self):
         self.driver.quit()
